@@ -63,6 +63,18 @@ function game() {
     //create variable computerScore and initialise it to 0
     let computerScore = 0;
     
+    //get 'rock' button and add event listener to call playRound function when clicked
+    //with first parameter as "rock" and second parameter as getComputerChoice()
+    const rockButton = document.querySelector(".rock");
+    rockButton.addEventListener("click", () => playRound("Rock"));
+    //get 'paper' button and add event listener to call playRound function when clicked
+    //with first parameter as "paper" and second parameter as getComputerChoice()
+    const paperButton = document.querySelector(".paper");
+    paperButton.addEventListener("click", () => playRound("Paper"));
+    //get 'scissors' button and add event listener to call playRound function when clicked
+    //with first parameter as "scissors" and second parameter as getComputerChoice()
+    const scissorsButton = document.querySelector(".scissors");
+    scissorsButton.addEventListener("click", () => playRound("Scissors"));
     /* Removed the logic of playing exactly five rounds
     //loop 5 times 
     for (let i = 0; i < 5; i++) {
