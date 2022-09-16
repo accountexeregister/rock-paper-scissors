@@ -62,6 +62,8 @@ function game() {
     let playerScore = 0;
     //create variable computerScore and initialise it to 0
     let computerScore = 0;
+    
+    /* Removed the logic of playing exactly five rounds
     //loop 5 times 
     for (let i = 0; i < 5; i++) {
         //in the loop, prompt user to enter input and store it in new variable playerInput
@@ -90,6 +92,7 @@ function game() {
         }
 
     }
+    */
     
     //outside the loop, if playerScore > computerScore, print player win in console
     if (playerScore > computerScore) {
