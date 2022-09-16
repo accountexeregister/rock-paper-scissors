@@ -75,6 +75,8 @@ function game() {
     //with first parameter as "scissors" and second parameter as getComputerChoice()
     const scissorsButton = document.querySelector(".scissors");
     scissorsButton.addEventListener("click", () => playRound("Scissors"));
+
+    
     /* Removed the logic of playing exactly five rounds
     //loop 5 times 
     for (let i = 0; i < 5; i++) {
@@ -105,16 +107,17 @@ function game() {
 
     }
     */
-    
-    //outside the loop, if playerScore > computerScore, print player win in console
+    //create results variable to store '.results' div element
+    const results = document.querySelector(".results");
+    //outside the loop, if playerScore > computerScore, insert player win text in '.results' div
     if (playerScore > computerScore) {
-        console.log(`You win! The final score is ${playerScore}:${computerScore}`);
-    //else if computerScore > playerScore, print computer win in console
+        results.textContent = `You win! The final score is ${playerScore}:${computerScore}`;
+    //else if computerScore > playerScore, insert computer win text in '.results' div
     } else if (computerScore > playerScore) {
-        console.log(`You lose! The final score is ${computerScore}:${playerScore}`);
-    //else print tie in console
+        results.textContent = `You lose! The final score is ${computerScore}:${playerScore}`;
+    //else insert tie text in '.results' div
     } else {
-        console.log(`It is a tie! The final score is ${playerScore}:${computerScore}`);
+        results.textContent = `It is a tie! The final score is ${playerScore}:${computerScore}`;
     }
     
     
